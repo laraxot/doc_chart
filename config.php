@@ -9,19 +9,19 @@ $moduleName = 'Chart';
 return [
     'baseUrl' => '',
     'production' => false,
-    'siteName' => 'Modulo ' . $moduleName,
-    'siteDescription' => 'Modulo ' . $moduleName,
+    'siteName' => 'Modulo '.$moduleName,
+    'siteDescription' => 'Modulo '.$moduleName,
     'lang' => 'it',
 
     'collections' => [
         'posts' => [
             'path' => static function ($page) {
-                return $page->lang . '/posts/' . Str::slug($page->getFilename());
+                return $page->lang.'/posts/'.Str::slug($page->getFilename());
             },
         ],
         'docs' => [
             'path' => static function ($page) {
-                return $page->lang . '/docs/' . Str::slug($page->getFilename());
+                return $page->lang.'/docs/'.Str::slug($page->getFilename());
             },
         ],
     ],
@@ -50,6 +50,6 @@ return [
         }
 
         // return Str::startsWith($path, 'http') ? $path : '/' . trimPath($path);
-        return url('/' . $page->lang . '/' . trimPath($path));
+        return url('/'.$page->lang.'/'.trimPath($path));
     },
 ];

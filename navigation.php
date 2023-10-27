@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 return [
-    'Introduzione al modulo ' . $moduleName => [
+    'Introduzione al modulo '.$moduleName => [
         'url' => 'docs/introduzione',
         'children' => [
             // 'Introducendo '.$moduleName => [
